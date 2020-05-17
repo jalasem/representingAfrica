@@ -58,16 +58,18 @@ export default {
 
   &:before {
     @apply absolute top-0 left-0 w-6 h-6 bg-white rounded-full;
-    background-image: url('/vectors/sun.svg');
+    background-image: url('/vectors/moon.svg');
     background-size: cover;
     border: solid 5px white;
     top: -2px;
     content: '';
   }
-}
-.aside__toggle--dark {
-  &::before {
-    left: calc(100% - 1.5rem);
+
+  &.aside__toggle--dark {
+    &::before {
+      left: calc(100% - 1.5rem);
+      background-image: url('/vectors/sun.svg');
+    }
   }
 }
 </style>
