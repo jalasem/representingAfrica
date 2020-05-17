@@ -14,7 +14,14 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap'
+      }
+    ]
   },
   /*
    ** Customize the progress-bar color
@@ -26,6 +33,10 @@ export default {
   css: ['./assets/scss/main.scss'],
   styleResources: {
     scss: './assets/scss/variables.scss'
+  },
+  colorMode: {
+    preference: 'system',
+    fallback: 'light'
   },
   /*
    ** Plugins to load before mounting the App
@@ -52,6 +63,9 @@ export default {
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv'
   ],
+  purgeCSS: {
+    whitelist: ['dark-mode']
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
