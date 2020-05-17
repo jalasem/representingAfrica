@@ -6,7 +6,13 @@
  */
 module.exports = {
   theme: {
-    darkSelector: '.dark-mode'
+    darkSelector: '.dark-mode',
+    extend: {
+      colors: {
+        'soft-black': '#636363',
+        'dirty-white': '#F1F1F1'
+      }
+    }
   },
   variants: {
     backgroundColor: [

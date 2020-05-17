@@ -49,7 +49,7 @@
       </div>
       <div class="my-4">
         <p class="font-medium mb-1">Nationality</p>
-        <select>
+        <select class="max-xs">
           <option value="all">African</option>
           <option
             v-for="(country, countryIndex) in africanCountries"
