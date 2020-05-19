@@ -6,7 +6,7 @@
     <div class="flex-grow">
       <h1 class="page__title text-4xl font-bold leading-10" v-text="title" />
       <div
-        class="aside__search flex items-center h-10 bg-white dark:bg-gray-800 px-2 mb-3"
+        class="aside__search flex items-center h-10 bg-white dark:bg-gray-800 px-2 mb-3 max-w-full"
       >
         <img src="/vectors/search.svg" alt="search" />
         <input
@@ -42,7 +42,7 @@
           </div>
           <label
             :for="`aside-category-${categoryIndex}`"
-            class="font-medium text-gray-800 dark:text-gray-300"
+            class="font-medium text-gray-800 dark:text-gray-300 max-w-md"
             v-text="category"
           />
         </div>
@@ -172,7 +172,7 @@ export default {
 
 <style lang="scss" scoped>
 aside {
-  @apply h-screen py-5 overflow-y-auto;
+  @apply h-screen py-5 overflow-y-auto overflow-x-hidden;
 }
 .page__title {
   @apply mb-8;

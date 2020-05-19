@@ -1,5 +1,8 @@
 <template>
-  <div class="pro-card box-shadow px-1 bg-white">
+  <div
+    class="pro-card box-shadow px-1 bg-white dark:bg-gray-800"
+    :class="{ dark: $colorMode.value === 'dark' }"
+  >
     <div class="pro-pic__wrapper">
       <div :style="`background-image: url(${proPic})`" class="pro-pic" />
     </div>
@@ -27,7 +30,7 @@
             <img src="/vectors/github.svg" alt="Github" />
           </a>
         </div>
-        <a href="#" class="pro__action">View website</a>
+        <a href="#" class="pro__action">website</a>
       </div>
     </div>
   </div>
@@ -72,7 +75,7 @@ export default {
     @apply relative w-full cursor-pointer;
     overflow: hidden;
     border-radius: 0.625rem;
-    height: 18.5rem;
+    height: 25rem;
     top: -1rem;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   }
@@ -82,7 +85,7 @@ export default {
     background-position: 50% 30%;
     background-size: cover;
     filter: saturate(0%) contrast(109%);
-    transition: all 800ms ease-in-out;
+    transition: all 0.3s ease-in;
     overflow: hidden;
 
     &:hover {
@@ -107,5 +110,16 @@ export default {
 .pro__action {
   @apply py-1 px-3 text-sm mr-1 rounded-sm;
   border: 0.7px solid black;
+}
+
+.dark {
+  .social__icons {
+    a img {
+      filter: invert(1);
+    }
+  }
+  .pro__action {
+    border-color: white;
+  }
 }
 </style>
