@@ -1,6 +1,6 @@
 <template>
   <div
-    class="pro-card box-shadow px-1 bg-white dark:bg-gray-800"
+    class="pro-card box-shadow px-2 bg-white dark:bg-gray-800"
     :class="{ dark: $colorMode.value === 'dark' }"
   >
     <div class="pro-pic__wrapper">
@@ -12,8 +12,8 @@
           {{ name }}
           {{ countryFlags.join(' ') }}
         </p>
-        <p class="text-xs mb-2">Frontend Developer, Tech Cabal</p>
-        <p class="text-sm">Popularly referred to as the Nigerian Tech Queen</p>
+        <p class="text-xs mb-2" v-text="proRole" />
+        <p class="text-sm" v-text="shortBio" />
       </div>
       <div class="flex items-center justify-between py-2">
         <div class="social__icons">
@@ -43,6 +43,10 @@ export default {
       type: String,
       default: 'Brenda Ajayi'
     },
+    proRole: {
+      type: String,
+      default: 'Frontend Developer, Tech Cabal'
+    },
     countries: {
       type: Array,
       default: () => ['NG']
@@ -50,6 +54,10 @@ export default {
     proPic: {
       type: String,
       default: '/images/brenda.jpg'
+    },
+    shortBio: {
+      type: String,
+      default: 'Popularly referred to as the Nigerian Tech Queen'
     }
   },
   computed: {
@@ -91,7 +99,7 @@ export default {
     &:hover {
       filter: saturate(110%) contrast(120%);
       transform: scale(1.15);
-      width: calc(100% - 0.625rem);
+      // width: calc(100% - 0.625rem);
     }
   }
 }

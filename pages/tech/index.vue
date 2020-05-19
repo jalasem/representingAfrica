@@ -4,7 +4,13 @@
     <main
       class="lg:pr-10 py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 col-gap-5 row-gap-8"
     >
-      <african-pro :countries="['NG', 'US', 'CA']" name="Ire Aderinokun" />
+      <african-pro
+        :countries="['NG', 'US']"
+        name="Abdulsamii Ajala"
+        pro-role="Senior Frontend Developer"
+        short-bio="Self acclaimed Vue(ad)vocate, expert mentor and UI/UX hobbyist"
+        pro-pic="/images/vuevocate.jpg"
+      />
       <african-pro v-for="i in 79" :key="i" />
     </main>
   </div>
