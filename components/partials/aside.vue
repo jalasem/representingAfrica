@@ -1,6 +1,6 @@
 <template>
-  <div
-    class="aside flex flex-col h-full"
+  <aside
+    class="aside flex flex-col h-full lg:pl-10"
     :class="{ dark: $colorMode.value === 'dark' }"
   >
     <div class="flex-grow">
@@ -70,7 +70,7 @@
         </div>
       </div>
     </div>
-    <div class="grid row-gap-5">
+    <div class="grid row-gap-3">
       <div class="my-4 max-w-xs">
         <div
           class="w-40 text-sm rounded bg-white dark:bg-gray-800 px-2 py-1 flex items-center"
@@ -113,7 +113,7 @@
         <nuxt-link class="aside__link" to="/">Nominate</nuxt-link>
       </p>
     </div>
-  </div>
+  </aside>
 </template>
 
 <script>
@@ -146,31 +146,34 @@ export default {
     }
   },
   data: () => ({
-    countries,
     displayMode: '',
+    nationality: 'Africa',
+    countries,
     africanCountries,
-    nationality: 'africa',
     selectedCategories: []
   }),
   mounted() {
     this.displayMode = this.$colorMode.value
   },
   methods: {
-    toggle() {
-      this.$colorMode.preference =
-        this.$colorMode.value === 'light' ? 'dark' : 'light'
-    },
+    // toggle() {
+    //   this.$colorMode.preference =
+    //     this.$colorMode.value === 'light' ? 'dark' : 'light'
+    // },
     changeDisplayMode(e) {
       this.$colorMode.preference = e.target.value
     },
     chooseNationality(e) {
-      console.log(e.target.value)
+      this.nationality = e.target.value
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
+aside {
+  @apply h-screen py-5 overflow-y-auto;
+}
 .page__title {
   @apply mb-8;
 }
