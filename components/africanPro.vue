@@ -4,16 +4,16 @@
     :class="{ dark: $colorMode.value === 'dark' }"
   >
     <div class="pro-pic__wrapper">
-      <div :style="`background-image: url(${proPic})`" class="pro-pic" />
+      <div :style="`background-image: url(${pro.proPic})`" class="pro-pic" />
     </div>
     <div class="flex flex-col">
       <div class="px-1 flex-grow">
         <p class="text-xl font-semibold cursor-pointer">
-          {{ name }}
-          {{ countryFlags.join(' ') }}
+          {{ pro.name }}
+          {{ countryFlag }}
         </p>
-        <p class="text-xs mb-2" v-text="proRole" />
-        <p class="text-sm" v-text="shortBio" />
+        <p class="text-xs mb-2">{{ pro.roles.join(', ').toUpperCase() }}</p>
+        <p class="text-sm" v-text="pro.shortBio" />
       </div>
       <div class="flex items-center justify-between py-2">
         <div class="social__icons">
@@ -39,36 +39,19 @@
 <script>
 export default {
   props: {
-    name: {
-      type: String,
-      default: 'Brenda Ajayi'
-    },
-    proRole: {
-      type: String,
-      default: 'Frontend Developer, Tech Cabal'
-    },
-    countries: {
-      type: Array,
-      default: () => ['NG']
-    },
-    proPic: {
-      type: String,
-      default: '/images/brenda.jpg'
-    },
-    shortBio: {
-      type: String,
-      default: 'Popularly referred to as the Nigerian Tech Queen'
+    pro: {
+      type: Object,
+      required: true,
+      default: () => {}
     }
   },
   computed: {
-    countryFlags() {
-      return this.countries.map((country) =>
-        country
-          .toUpperCase()
-          .replace(/./g, (char) =>
-            String.fromCodePoint(char.charCodeAt(0) + 127397)
-          )
-      )
+    countryFlag() {
+      return this.pro.nationality.countryCode
+        .toUpperCase()
+        .replace(/./g, (char) =>
+          String.fromCodePoint(char.charCodeAt(0) + 127397)
+        )
     }
   }
 }
