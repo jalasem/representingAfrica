@@ -4,7 +4,7 @@
     :class="{ dark: $colorMode.value === 'dark' }"
   >
     <div class="flex-grow">
-      <h1 class="page__title text-4xl font-bold leading-10" v-text="title" />
+      <h1 class="page__title text-3xl font-bold leading-10" v-text="title" />
       <div
         class="aside__search flex items-center h-10 bg-white dark:bg-gray-800 px-2 mb-3 max-w-full"
       >
