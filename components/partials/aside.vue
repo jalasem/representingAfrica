@@ -42,26 +42,60 @@
           </div>
           <label
             :for="`aside-category-${categoryIndex}`"
-            class="font-medium"
+            class="font-medium text-gray-800 dark:text-gray-300"
             v-text="category"
           />
         </div>
       </div>
-      <div class="my-4">
-        <p class="font-medium mb-1">Nationality</p>
-        <select class="max-xs">
-          <option value="all">African</option>
-          <option
-            v-for="(country, countryIndex) in africanCountries"
-            :key="`from-country-${countryIndex}`"
-            :value="country"
-            v-text="country"
+      <div class="my-4 max-w-xs">
+        <p class="font-medium mb-1">From</p>
+        <div
+          class="max-w-sm box-shadow rounded bg-white dark:bg-gray-800 px-2 py-1"
+        >
+          <input
+            list="nationality"
+            class="w-full bg-transparent capitalize"
+            name="select"
+            :value="nationality"
+            @change="chooseNationality($event)"
           />
-        </select>
+          <datalist id="nationality" class="form-control">
+            <option value="Africa">Africa</option>
+            <option
+              v-for="country in africanCountries"
+              :key="`from-country-${country.alpha3Code}`"
+              :value="country.name"
+            />
+          </datalist>
+        </div>
       </div>
     </div>
     <div class="grid row-gap-5">
-      <div class="flex items-center capitalize">
+      <div class="my-4 max-w-xs">
+        <div
+          class="w-40 text-sm rounded bg-white dark:bg-gray-800 px-2 py-1 flex items-center"
+        >
+          <label
+            for="theme-mode"
+            class="theme-mode__label w-5 h-5 mr-2"
+            :class="`${displayMode}-mode ${$colorMode.value}-theme`"
+            v-text="''"
+          />
+          <select
+            id="theme-mode"
+            v-model="displayMode"
+            class="bg-transparent w-full"
+            @change="changeDisplayMode"
+          >
+            <option value="system">
+              System Default
+            </option>
+            <option value="light">Light Mode</option>
+            <option value="dark">Dark Mode</option>
+          </select>
+        </div>
+      </div>
+      <!-- <div class="flex items-center capitalize">
         <span
           :class="
             $colorMode.value === 'light'
@@ -72,7 +106,7 @@
           @click="toggle"
         />
         {{ $colorMode.value }} mode
-      </div>
+      </div> -->
       <p class="flex items-center">
         <nuxt-link class="aside__link" to="/">About</nuxt-link>
         <span class="bar" />
@@ -84,6 +118,7 @@
 
 <script>
 import countries from '~/assets/data/countries'
+import africanCountries from '~/assets/data/africa.json'
 export default {
   props: {
     title: {
@@ -111,22 +146,25 @@ export default {
     }
   },
   data: () => ({
+    countries,
+    displayMode: '',
+    africanCountries,
+    nationality: 'africa',
     selectedCategories: []
   }),
-  computed: {
-    africanCountries() {
-      return countries
-        .filter(
-          (country) =>
-            country.continent && country.continent.toLowerCase() === 'africa'
-        )
-        .map(({ country }) => country)
-    }
+  mounted() {
+    this.displayMode = this.$colorMode.value
   },
   methods: {
     toggle() {
       this.$colorMode.preference =
         this.$colorMode.value === 'light' ? 'dark' : 'light'
+    },
+    changeDisplayMode(e) {
+      this.$colorMode.preference = e.target.value
+    },
+    chooseNationality(e) {
+      console.log(e.target.value)
     }
   }
 }
@@ -177,5 +215,24 @@ export default {
 
 input:checked + svg {
   display: block;
+}
+
+.theme-mode__label {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &.dark-theme {
+    filter: invert(1);
+  }
+  &.system-mode {
+    background-image: url('/vectors/system.svg');
+  }
+  &.dark-mode {
+    background-image: url('/vectors/moon.svg');
+  }
+  &.light-mode {
+    background-image: url('/vectors/sun.svg');
+  }
 }
 </style>

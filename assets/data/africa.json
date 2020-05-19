@@ -1,0 +1,302 @@
+[
+  {
+    "flag": "https://restcountries.eu/data/dza.svg",
+    "name": "Algeria",
+    "alpha3Code": "DZA"
+  },
+  {
+    "flag": "https://restcountries.eu/data/ago.svg",
+    "name": "Angola",
+    "alpha3Code": "AGO"
+  },
+  {
+    "flag": "https://restcountries.eu/data/ben.svg",
+    "name": "Benin",
+    "alpha3Code": "BEN"
+  },
+  {
+    "flag": "https://restcountries.eu/data/bwa.svg",
+    "name": "Botswana",
+    "alpha3Code": "BWA"
+  },
+  {
+    "flag": "https://restcountries.eu/data/iot.svg",
+    "name": "British Indian Ocean Territory",
+    "alpha3Code": "IOT"
+  },
+  {
+    "flag": "https://restcountries.eu/data/bfa.svg",
+    "name": "Burkina Faso",
+    "alpha3Code": "BFA"
+  },
+  {
+    "flag": "https://restcountries.eu/data/bdi.svg",
+    "name": "Burundi",
+    "alpha3Code": "BDI"
+  },
+  {
+    "flag": "https://restcountries.eu/data/cmr.svg",
+    "name": "Cameroon",
+    "alpha3Code": "CMR"
+  },
+  {
+    "flag": "https://restcountries.eu/data/cpv.svg",
+    "name": "Cabo Verde",
+    "alpha3Code": "CPV"
+  },
+  {
+    "flag": "https://restcountries.eu/data/caf.svg",
+    "name": "Central African Republic",
+    "alpha3Code": "CAF"
+  },
+  {
+    "flag": "https://restcountries.eu/data/tcd.svg",
+    "name": "Chad",
+    "alpha3Code": "TCD"
+  },
+  {
+    "flag": "https://restcountries.eu/data/com.svg",
+    "name": "Comoros",
+    "alpha3Code": "COM"
+  },
+  {
+    "flag": "https://restcountries.eu/data/cog.svg",
+    "name": "Congo",
+    "alpha3Code": "COG"
+  },
+  {
+    "flag": "https://restcountries.eu/data/cod.svg",
+    "name": "Congo (Democratic Republic of the)",
+    "alpha3Code": "COD"
+  },
+  {
+    "flag": "https://restcountries.eu/data/dji.svg",
+    "name": "Djibouti",
+    "alpha3Code": "DJI"
+  },
+  {
+    "flag": "https://restcountries.eu/data/egy.svg",
+    "name": "Egypt",
+    "alpha3Code": "EGY"
+  },
+  {
+    "flag": "https://restcountries.eu/data/gnq.svg",
+    "name": "Equatorial Guinea",
+    "alpha3Code": "GNQ"
+  },
+  {
+    "flag": "https://restcountries.eu/data/eri.svg",
+    "name": "Eritrea",
+    "alpha3Code": "ERI"
+  },
+  {
+    "flag": "https://restcountries.eu/data/eth.svg",
+    "name": "Ethiopia",
+    "alpha3Code": "ETH"
+  },
+  {
+    "flag": "https://restcountries.eu/data/atf.svg",
+    "name": "French Southern Territories",
+    "alpha3Code": "ATF"
+  },
+  {
+    "flag": "https://restcountries.eu/data/gab.svg",
+    "name": "Gabon",
+    "alpha3Code": "GAB"
+  },
+  {
+    "flag": "https://restcountries.eu/data/gmb.svg",
+    "name": "Gambia",
+    "alpha3Code": "GMB"
+  },
+  {
+    "flag": "https://restcountries.eu/data/gha.svg",
+    "name": "Ghana",
+    "alpha3Code": "GHA"
+  },
+  {
+    "flag": "https://restcountries.eu/data/gin.svg",
+    "name": "Guinea",
+    "alpha3Code": "GIN"
+  },
+  {
+    "flag": "https://restcountries.eu/data/gnb.svg",
+    "name": "Guinea-Bissau",
+    "alpha3Code": "GNB"
+  },
+  {
+    "flag": "https://restcountries.eu/data/civ.svg",
+    "name": "Côte d'Ivoire",
+    "alpha3Code": "CIV"
+  },
+  {
+    "flag": "https://restcountries.eu/data/ken.svg",
+    "name": "Kenya",
+    "alpha3Code": "KEN"
+  },
+  {
+    "flag": "https://restcountries.eu/data/lso.svg",
+    "name": "Lesotho",
+    "alpha3Code": "LSO"
+  },
+  {
+    "flag": "https://restcountries.eu/data/lbr.svg",
+    "name": "Liberia",
+    "alpha3Code": "LBR"
+  },
+  {
+    "flag": "https://restcountries.eu/data/lby.svg",
+    "name": "Libya",
+    "alpha3Code": "LBY"
+  },
+  {
+    "flag": "https://restcountries.eu/data/mdg.svg",
+    "name": "Madagascar",
+    "alpha3Code": "MDG"
+  },
+  {
+    "flag": "https://restcountries.eu/data/mwi.svg",
+    "name": "Malawi",
+    "alpha3Code": "MWI"
+  },
+  {
+    "flag": "https://restcountries.eu/data/mli.svg",
+    "name": "Mali",
+    "alpha3Code": "MLI"
+  },
+  {
+    "flag": "https://restcountries.eu/data/mrt.svg",
+    "name": "Mauritania",
+    "alpha3Code": "MRT"
+  },
+  {
+    "flag": "https://restcountries.eu/data/mus.svg",
+    "name": "Mauritius",
+    "alpha3Code": "MUS"
+  },
+  {
+    "flag": "https://restcountries.eu/data/myt.svg",
+    "name": "Mayotte",
+    "alpha3Code": "MYT"
+  },
+  {
+    "flag": "https://restcountries.eu/data/mar.svg",
+    "name": "Morocco",
+    "alpha3Code": "MAR"
+  },
+  {
+    "flag": "https://restcountries.eu/data/moz.svg",
+    "name": "Mozambique",
+    "alpha3Code": "MOZ"
+  },
+  {
+    "flag": "https://restcountries.eu/data/nam.svg",
+    "name": "Namibia",
+    "alpha3Code": "NAM"
+  },
+  {
+    "flag": "https://restcountries.eu/data/ner.svg",
+    "name": "Niger",
+    "alpha3Code": "NER"
+  },
+  {
+    "flag": "https://restcountries.eu/data/nga.svg",
+    "name": "Nigeria",
+    "alpha3Code": "NGA"
+  },
+  {
+    "flag": "https://restcountries.eu/data/reu.svg",
+    "name": "Réunion",
+    "alpha3Code": "REU"
+  },
+  {
+    "flag": "https://restcountries.eu/data/rwa.svg",
+    "name": "Rwanda",
+    "alpha3Code": "RWA"
+  },
+  {
+    "flag": "https://restcountries.eu/data/shn.svg",
+    "name": "Saint Helena, Ascension and Tristan da Cunha",
+    "alpha3Code": "SHN"
+  },
+  {
+    "flag": "https://restcountries.eu/data/stp.svg",
+    "name": "Sao Tome and Principe",
+    "alpha3Code": "STP"
+  },
+  {
+    "flag": "https://restcountries.eu/data/sen.svg",
+    "name": "Senegal",
+    "alpha3Code": "SEN"
+  },
+  {
+    "flag": "https://restcountries.eu/data/syc.svg",
+    "name": "Seychelles",
+    "alpha3Code": "SYC"
+  },
+  {
+    "flag": "https://restcountries.eu/data/sle.svg",
+    "name": "Sierra Leone",
+    "alpha3Code": "SLE"
+  },
+  {
+    "flag": "https://restcountries.eu/data/som.svg",
+    "name": "Somalia",
+    "alpha3Code": "SOM"
+  },
+  {
+    "flag": "https://restcountries.eu/data/zaf.svg",
+    "name": "South Africa",
+    "alpha3Code": "ZAF"
+  },
+  {
+    "flag": "https://restcountries.eu/data/ssd.svg",
+    "name": "South Sudan",
+    "alpha3Code": "SSD"
+  },
+  {
+    "flag": "https://restcountries.eu/data/sdn.svg",
+    "name": "Sudan",
+    "alpha3Code": "SDN"
+  },
+  {
+    "flag": "https://restcountries.eu/data/swz.svg",
+    "name": "Swaziland",
+    "alpha3Code": "SWZ"
+  },
+  {
+    "flag": "https://restcountries.eu/data/tza.svg",
+    "name": "Tanzania, United Republic of",
+    "alpha3Code": "TZA"
+  },
+  {
+    "flag": "https://restcountries.eu/data/tgo.svg",
+    "name": "Togo",
+    "alpha3Code": "TGO"
+  },
+  {
+    "flag": "https://restcountries.eu/data/tun.svg",
+    "name": "Tunisia",
+    "alpha3Code": "TUN"
+  },
+  {
+    "flag": "https://restcountries.eu/data/uga.svg",
+    "name": "Uganda",
+    "alpha3Code": "UGA"
+  },
+  {
+    "flag": "https://restcountries.eu/data/esh.svg",
+    "name": "Western Sahara",
+    "alpha3Code": "ESH"
+  },
+  {
+    "flag": "https://restcountries.eu/data/zmb.svg",
+    "name": "Zambia",
+    "alpha3Code": "ZMB"
+  },
+  {
+    "flag": "https://restcountries.eu/data/zwe.svg",
+    "name": "Zimbabwe",
+    "alpha3Code": "ZWE"
+  }
+]
