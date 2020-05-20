@@ -6,7 +6,7 @@
     <div class="flex-grow">
       <h1 class="page__title text-3xl font-bold leading-10" v-text="title" />
       <div
-        class="aside__search flex items-center h-10 bg-white dark:bg-gray-800 px-2 mb-3 max-w-full"
+        class="aside__search flex items-center h-8 bg-white dark:bg-gray-800 px-2 text-sm mb-3 max-w-full"
       >
         <img src="/vectors/search.svg" alt="search" />
         <input
@@ -20,10 +20,10 @@
         <div
           v-for="(category, categoryIndex) in categories"
           :key="`aside-category-${categoryIndex}`"
-          class="flex items-center mb-2"
+          class="flex items-center mb-1"
         >
           <div
-            class="flex box-shadow bg-white dark:bg-gray-800 mr-3 rounded w-5 h-5 flex flex-shrink-0 justify-center items-center focus-within:border-blue-500"
+            class="flex box-shadow bg-white dark:bg-gray-800 mr-2 rounded w-4 h-4 flex flex-shrink-0 justify-center items-center focus-within:border-blue-500"
           >
             <input
               :id="`aside-category-${categoryIndex}`"
@@ -34,7 +34,7 @@
               :value="category"
             />
             <svg
-              class="fill-current hidden w-4 h-4 text-gray-600 dark:text-gray-400 pointer-events-none"
+              class="fill-current hidden w-3 h-3 text-gray-600 dark:text-gray-400 pointer-events-none"
               viewBox="0 0 20 20"
             >
               <path d="M0 11l2-2 5 5L18 3l2 2L7 18z" />
@@ -42,7 +42,7 @@
           </div>
           <label
             :for="`aside-category-${categoryIndex}`"
-            class="font-medium text-gray-800 text-sm dark:text-gray-300 max-w-md"
+            class="font-medium text-gray-800 mt-1 text-sm dark:text-gray-300 max-w-md"
             v-text="category"
           />
         </div>
