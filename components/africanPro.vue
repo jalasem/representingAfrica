@@ -16,7 +16,7 @@
         <p class="text-sm" v-text="pro.shortBio" />
       </div>
       <div class="flex items-center justify-between py-2">
-        <div class="social__icons">
+        <div class="social__icons dark:social__icons--dark">
           <a href="#">
             <img src="/vectors/facebook.svg" alt="facebook" />
           </a>
@@ -103,8 +103,8 @@ export default {
   border: 0.7px solid black;
 }
 
-.dark {
-  .social__icons {
+.dark-mode {
+  .social__icons.dark\:social__icons--dark {
     a img {
       filter: invert(1);
     }
