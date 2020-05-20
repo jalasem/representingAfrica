@@ -19,20 +19,36 @@
 import RepAside from '~/components/partials/aside'
 import AfricanPro from '~/components/africanPro'
 
-import africanPros from '~/assets/data/africanPros'
 export default {
   name: 'Tech',
   components: {
     RepAside,
     AfricanPro
   },
-  data() {
-    return {
-      africanPros
+  async asyncData({ app }) {
+    try {
+      const pros = await app.flamelink.content.get({
+        schemaKey: 'africanTechPros',
+        populate: true
+      })
+      const africanPros = Object.keys(pros).map((proKey) => {
+        const proObj = pros[proKey]
+        proObj.id = proKey
+        proObj.proPic = proObj.proPic && proObj.proPic[0].url
+        delete proObj._fl_meta_
+        return proObj
+      })
+      return { africanPros }
+    } catch (err) {
+      return { pros: [] }
     }
+  },
+  data() {
+    return {}
   },
   computed: {
     filterRoles() {
+      if (!this.africanPros || this.africanPros.length < 1) return []
       return [...new Set(this.africanPros.map((pro) => pro.roles).flat(1))]
     }
   }

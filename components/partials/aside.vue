@@ -42,7 +42,7 @@
           </div>
           <label
             :for="`aside-category-${categoryIndex}`"
-            class="font-medium text-gray-800 mt-1 text-sm dark:text-gray-300 max-w-md"
+            class="font-medium text-gray-800 mt-1 text-sm dark:text-gray-300 max-w-md uppercase"
             v-text="category"
           />
         </div>

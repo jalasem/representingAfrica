@@ -28,6 +28,9 @@
     "@nuxtjs/pwa": "^3.0.0-0",
     "@nuxtjs/style-resources": "^1.0.0",
     "element-ui": "^2.13.2",
+    "firebase": "^7.14.4",
+    "firebase-admin": "^8.3.0",
+    "flamelink": "^1.0.0-alpha.24",
     "nuxt": "^2.0.0",
     "vue-multiselect": "^2.1.6"
   },

@@ -41,7 +41,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [{ src: '~/plugins/front-only', ssr: false }],
+  plugins: [{ src: '~/plugins/front-only', ssr: false }, '~/plugins/flamelink'],
   /*
    ** Nuxt.js dev-modules
    */

@@ -12,25 +12,31 @@
           {{ pro.name }}
           {{ countryFlag }}
         </p>
-        <p class="text-xs mb-2">{{ pro.roles.join(', ').toUpperCase() }}</p>
+        <p class="text-xs mb-2 uppercase">{{ pro.roles.join(', ') }}</p>
         <p class="text-sm" v-text="pro.shortBio" />
       </div>
       <div class="flex items-center justify-between py-2">
         <div class="social__icons dark:social__icons--dark">
-          <a href="#">
+          <a v-if="pro.socials.facebook" :href="pro.socials.facebook">
             <img src="/vectors/facebook.svg" alt="facebook" />
           </a>
-          <a href="#">
+          <a v-if="pro.socials.twitter" :href="pro.socials.twitter">
             <img src="/vectors/twitter.svg" alt="Twitter" />
           </a>
-          <a href="#">
+          <a v-if="pro.socials.linkedin" :href="pro.socials.linkedin">
             <img src="/vectors/linkedin.svg" alt="Linkedin" />
           </a>
-          <a href="#">
+          <a v-if="pro.socials.github" :href="pro.socials.github">
             <img src="/vectors/github.svg" alt="Github" />
           </a>
         </div>
-        <a href="#" class="pro__action">website</a>
+        <a
+          v-if="pro.website"
+          :href="pro.website"
+          target="_blank"
+          class="pro__action"
+          >website</a
+        >
       </div>
     </div>
   </div>
