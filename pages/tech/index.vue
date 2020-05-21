@@ -56,7 +56,6 @@ export default {
       options: {
         threshold: 0.3,
         minMatchCharLength: 2,
-        // defaultAll: true,
         tokenize: true,
         findAllMatches: true,
         keys: ['name', 'bio', 'shortBio']
