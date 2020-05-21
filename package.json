@@ -31,7 +31,9 @@
     "firebase": "^7.14.4",
     "firebase-admin": "^8.3.0",
     "flamelink": "^1.0.0-alpha.24",
+    "fuse.js": "^6.0.0",
     "nuxt": "^2.0.0",
+    "vue-fuse": "^2.2.1",
     "vue-multiselect": "^2.1.6"
   },
   "devDependencies": {

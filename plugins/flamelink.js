@@ -1,6 +1,9 @@
 import flamelink from 'flamelink/app'
 import 'flamelink/cf/content'
 import 'flamelink/cf/storage'
+// import * as firebase from 'firebase/app'
+// import 'firebase/database'
+// import 'firebase/storage'
 
 export default ({ app }) => {
   let firebaseApp
@@ -22,6 +25,7 @@ export default ({ app }) => {
     }
   } else {
     const firebase = require('firebase/app')
+    require('firebase/firestore')
     require('firebase/database')
     require('firebase/storage')
 
@@ -32,7 +36,9 @@ export default ({ app }) => {
         databaseURL: process.env.FLAMELINK_DB_URL,
         projectId: process.env.FLAMELINK_PROJECT_ID,
         storageBucket: process.env.FLAMELINK_STORAGE_BUCKET,
-        messagingSenderId: process.env.FLAMELINK_MESSAGING_SENDER_ID
+        messagingSenderId: process.env.FLAMELINK_MESSAGING_SENDER_ID,
+        appId: process.env.FLAMELINK_APP_ID,
+        measurementId: process.env.FLAMELINK_MEASUREMENT_ID
       })
     } else {
       firebaseApp = firebase.app()

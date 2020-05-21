@@ -14,6 +14,7 @@
           spellcheck="false"
           placeholder="Search"
           type="search"
+          @input="onSearch"
         />
       </div>
       <div class="my-4">
@@ -32,6 +33,7 @@
               :name="`aside-category-${categoryIndex}`"
               type="checkbox"
               :value="category"
+              @change="onFilter"
             />
             <svg
               class="fill-current hidden w-3 h-3 text-gray-600 dark:text-gray-400 pointer-events-none"
@@ -95,18 +97,6 @@
           </select>
         </div>
       </div>
-      <!-- <div class="flex items-center capitalize">
-        <span
-          :class="
-            $colorMode.value === 'light'
-              ? 'aside__toggle--light'
-              : 'aside__toggle--dark'
-          "
-          class="aside__toggle"
-          @click="toggle"
-        />
-        {{ $colorMode.value }} mode
-      </div> -->
       <p class="flex items-center">
         <nuxt-link class="aside__link" to="/">About</nuxt-link>
         <span class="bar" />
@@ -127,22 +117,7 @@ export default {
     },
     categories: {
       type: Array,
-      default: () => [
-        'Executive',
-        'Founder',
-        'Graphic Designer',
-        'UI/UX Designer',
-        'Product Designer',
-        'Data Analyst',
-        'Machine Learning',
-        'Artificial Intelligence',
-        'Cyber Security',
-        'Animator',
-        'Fintech',
-        'Devops',
-        'Writer',
-        'Entrepreneur'
-      ]
+      default: () => []
     }
   },
   data: () => ({
@@ -156,15 +131,23 @@ export default {
     this.displayMode = this.$colorMode.value
   },
   methods: {
-    // toggle() {
-    //   this.$colorMode.preference =
-    //     this.$colorMode.value === 'light' ? 'dark' : 'light'
-    // },
+    onSearch(e) {
+      const searchTerm = e.target.value
+      if (searchTerm.length >= 3) {
+        this.$eventBus.$emit('search', searchTerm)
+      } else {
+        this.$eventBus.$emit('clear')
+      }
+    },
+    onFilter() {
+      this.$eventBus.$emit('filterRoles', this.selectedCategories)
+    },
     changeDisplayMode(e) {
       this.$colorMode.preference = e.target.value
     },
     chooseNationality(e) {
       this.nationality = e.target.value
+      this.$eventBus.$emit('filterNation', this.nationality)
     }
   }
 }
