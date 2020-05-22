@@ -32,7 +32,9 @@
     "firebase-admin": "^8.3.0",
     "flamelink": "^1.0.0-alpha.24",
     "fuse.js": "^6.0.0",
+    "node-sass": "^4.14.1",
     "nuxt": "^2.0.0",
+    "sass-loader": "^8.0.2",
     "vue-fuse": "^2.2.1",
     "vue-multiselect": "^2.1.6"
   },
@@ -53,12 +55,10 @@
     "eslint-plugin-prettier": "^3.1.2",
     "husky": "^4.0.0",
     "lint-staged": "^10.0.0",
-    "node-sass": "^4.14.1",
     "prettier": "^1.19.1",
     "require-extension-hooks": "^0.3.3",
     "require-extension-hooks-babel": "^1.0.0",
     "require-extension-hooks-vue": "^2.0.0",
-    "sass-loader": "^8.0.2",
     "tailwindcss-dark-mode": "^1.1.4"
   }
 }
