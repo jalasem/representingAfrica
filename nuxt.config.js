@@ -82,6 +82,19 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config, { isDev, isClient, isServer }) {
+      if (isServer) {
+        config.externals = {
+          'firebase-admin': 'commonjs firebase-admin',
+          'firebase/app': 'commonjs firebase/app',
+          'firebase/firestore': 'commonjs firebase/firestore',
+          'firebase/database': 'commonjs firebase/database',
+          'firebase/storage': 'commonjs firebase/storage',
+          'flamelink/app': 'commonjs flamelink/app',
+          'flamelink/cf/content': 'commonjs flamelink/cf/content',
+          'flamelink/cf/storage': 'commonjs flamelink/cf/storage'
+        }
+      }
+    }
   }
 }
